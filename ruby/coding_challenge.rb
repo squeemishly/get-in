@@ -1,4 +1,8 @@
 require 'pry'
 
-class Object
+class GetIn
+  def retrieve(data, seq)
+    data[seq[0]]
+  end
+
 end
