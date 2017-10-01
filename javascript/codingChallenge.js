@@ -1,6 +1,10 @@
 class GetIn {
   retrieve(data, values) {
-    return data[values]
+    let val = data
+    values.forEach(key => {
+      val = val[key]
+    })
+    return val
   }
 }
 

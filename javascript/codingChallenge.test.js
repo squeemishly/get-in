@@ -4,13 +4,28 @@ const GetIn = require('./codingChallenge');
 describe('GetIn', () => {
   before( () => {
     gi = new GetIn
+    hash = {"aSimple": "hash",
+            "aKitty": "cuteness",
+            "Xena": {
+              "badass": true,
+              "weapons": {
+                "pointy": "swords",
+                "throwy": "chakram",
+                "sharp": "wit"
+              }
+
+            }}
   })
 
-  it('can retrieve the value from a simple hash', () => {
-    assert.equal("hash", gi.retrieve({"aSimple": "hash"}, ["aSimple"]))
-  });
+  it('can retrieve one value from a simple hash', () => {
+    assert.equal("hash", gi.retrieve(hash, ["aSimple"]))
+  })
 
-  it('can retrieve the value from a longer hash', () => {
-    assert.equal("cuteness", gi.retrieve({"aSimple": "hash", "aKitty": "cuteness"}, ["aKitty"]))
-  });
-});
+  it('can retrieve another value from a simple hash', () => {
+    assert.equal("cuteness", gi.retrieve(hash, ["aKitty"]))
+  })
+
+  it('can retrieve a nested value in a hash', () => {
+    assert.equal(true, gi.retrieve(hash, ["Xena", "badass"]))
+  })
+})
