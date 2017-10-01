@@ -1,9 +1,9 @@
-class Object {
+class GetIn {
   constructor() {
 
   }
 
-  
+
 }
 
-module.exports = Object;
+module.exports = GetIn;
