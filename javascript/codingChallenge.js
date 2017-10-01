@@ -1,9 +1,7 @@
 class GetIn {
-  constructor() {
-
+  retrieve(data, values) {
+    return "hash"
   }
-
-
 }
 
 module.exports = GetIn;
