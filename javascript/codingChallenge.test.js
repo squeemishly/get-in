@@ -28,4 +28,8 @@ describe('GetIn', () => {
   it('can retrieve a nested value in a hash', () => {
     assert.equal(true, gi.retrieve(hash, ["Xena", "badass"]))
   })
+
+  it('can retrieve a deeply nested value in a hash', () => {
+    assert.equal("wit", gi.retrieve(hash, ["Xena", "weapons", "sharp"]))
+  })
 })
