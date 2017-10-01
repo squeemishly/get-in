@@ -1,6 +1,6 @@
 class GetIn {
   retrieve(data, values) {
-    return "hash"
+    return data[values]
   }
 }
 
